@@ -47,7 +47,19 @@ import { PagesDropdownComponent } from "./components/dropdowns/pages-dropdown/pa
 import { NotificationDropdownComponent } from "./components/dropdowns/notification-dropdown/notification-dropdown.component";
 import { SidebarComponent } from "./components/sidebar/sidebar.component";
 import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user-dropdown.component";
+import { environment } from "src/environments/environment";
+import { AngularFireModule } from '@angular/fire';
+import { AngularFirestoreModule } from '@angular/fire/firestore';
+import { AngularFireStorageModule } from '@angular/fire/storage';
+import { AngularFireAuthModule } from '@angular/fire/auth';
+import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
+import {HttpClientModule, HttpClient} from '@angular/common/http';
+import { TranslateHttpLoader } from '@ngx-translate/http-loader';
+import { UsersListComponent } from './views/admin/users-list/users-list.component';
 
+export function HttpLoaderFactory(http: HttpClient) {
+  return new TranslateHttpLoader(http, './assets/i18n/', '.json');
+}
 @NgModule({
   declarations: [
     AppComponent,
@@ -84,8 +96,24 @@ import { UserDropdownComponent } from "./components/dropdowns/user-dropdown/user
     IndexComponent,
     LandingComponent,
     ProfileComponent,
+    UsersListComponent,
   ],
-  imports: [BrowserModule, AppRoutingModule],
+  imports: [
+    BrowserModule,
+    AppRoutingModule,
+    AngularFireModule.initializeApp(environment.firebaseConfig),
+    AngularFirestoreModule,
+    AngularFireAuthModule,
+    AngularFireStorageModule,
+    HttpClientModule,
+    TranslateModule.forRoot({
+      loader: {
+          provide: TranslateLoader,
+          useFactory: HttpLoaderFactory,
+          deps: [HttpClient]
+      }
+  })
+  ],
   providers: [],
   bootstrap: [AppComponent],
 })

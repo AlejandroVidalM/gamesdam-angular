@@ -4,6 +4,15 @@
 
 export const environment = {
   production: false,
+  firebaseConfig: {
+    apiKey: "AIzaSyAxSy_-7iuS44NI-II_2JQpBx34NT3fVRQ",
+    authDomain: "genio-1a807.firebaseapp.com",
+    projectId: "genio-1a807",
+    storageBucket: "genio-1a807.appspot.com",
+    messagingSenderId: "268521075412",
+    appId: "1:268521075412:web:5764cfc31926c5f885c141",
+    measurementId: "G-SMQZH19KRJ"
+  }
 };
 
 /*
