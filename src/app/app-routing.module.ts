@@ -4,6 +4,7 @@ import { Routes, RouterModule } from "@angular/router";
 // layouts
 import { AdminComponent } from "./layouts/admin/admin.component";
 import { AuthComponent } from "./layouts/auth/auth.component";
+import { GamesService } from './services/games.service';
 
 // admin views
 import { DashboardComponent } from "./views/admin/dashboard/dashboard.component";
@@ -11,6 +12,8 @@ import { MapsComponent } from "./views/admin/maps/maps.component";
 import { SettingsComponent } from "./views/admin/settings/settings.component";
 import { TablesComponent } from "./views/admin/tables/tables.component";
 import { UsersListComponent } from "./views/admin/users-list/users-list.component";
+import { GameComponent } from "./views/admin/game/game.component";
+
 
 // auth views
 import { LoginComponent } from "./views/auth/login/login.component";
@@ -20,6 +23,7 @@ import { RegisterComponent } from "./views/auth/register/register.component";
 import { IndexComponent } from "./views/index/index.component";
 import { LandingComponent } from "./views/landing/landing.component";
 import { ProfileComponent } from "./views/profile/profile.component";
+import { GameNewComponent } from './views/admin/game-new/game-new.component';
 
 const routes: Routes = [
   // admin views
@@ -32,6 +36,8 @@ const routes: Routes = [
       { path: "tables", component: TablesComponent },
       { path: "maps", component: MapsComponent },
       { path: "users", component: UsersListComponent },
+      { path: "games", component: GameComponent },
+      { path: "games/new", component: GameNewComponent},
       { path: "", redirectTo: "dashboard", pathMatch: "full" },
     ],
   },

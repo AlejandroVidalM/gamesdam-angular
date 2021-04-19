@@ -56,6 +56,9 @@ import {TranslateLoader, TranslateModule} from '@ngx-translate/core';
 import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { UsersListComponent } from './views/admin/users-list/users-list.component';
+import { GameComponent } from './views/admin/game/game.component';
+import { ReactiveFormsModule } from '@angular/forms';
+import { GameNewComponent } from './views/admin/game-new/game-new.component';
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -97,6 +100,8 @@ export function HttpLoaderFactory(http: HttpClient) {
     LandingComponent,
     ProfileComponent,
     UsersListComponent,
+    GameComponent,
+    GameNewComponent
   ],
   imports: [
     BrowserModule,
@@ -112,7 +117,8 @@ export function HttpLoaderFactory(http: HttpClient) {
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
       }
-  })
+  }),
+  ReactiveFormsModule
   ],
   providers: [],
   bootstrap: [AppComponent],
