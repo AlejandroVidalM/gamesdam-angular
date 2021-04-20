@@ -5,7 +5,7 @@ export interface Game {
     photoURL?: string;
     rating: number;
     year: number;
-    pc: boolean;
+    steam: boolean;
     ps5: boolean;
     xboxX: boolean;
     nintendoSwitch: boolean;

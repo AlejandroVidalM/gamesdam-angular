@@ -4,7 +4,7 @@ import { Routes, RouterModule } from "@angular/router";
 // layouts
 import { AdminComponent } from "./layouts/admin/admin.component";
 import { AuthComponent } from "./layouts/auth/auth.component";
-import { GamesService } from './services/games.service';
+import { GameService } from './services/game.service';
 
 // admin views
 import { DashboardComponent } from "./views/admin/dashboard/dashboard.component";
