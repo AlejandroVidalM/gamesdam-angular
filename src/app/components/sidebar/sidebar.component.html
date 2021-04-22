@@ -80,91 +80,48 @@
       <!-- Navigation -->
 
       <ul class="md:flex-col md:min-w-full flex flex-col list-none">
-        <li class="items-center">
-          <a
-            [routerLink]="['/admin/dashboard']"
-            class="text-xs uppercase py-3 font-bold block"
-            routerLinkActive
-            #adminDashboard="routerLinkActive"
-            [ngClass]="
-              adminDashboard.isActive
-                ? 'text-red-600 hover:text-red-700'
-                : 'text-blueGray-700 hover:text-blueGray-500'
-            "
-          >
-            <i
-              class="fas fa-tv mr-2 text-sm"
-              [ngClass]="
-                adminDashboard.isActive ? 'opacity-75' : 'text-blueGray-300'
-              "
-            ></i>
-            Dashboard
-          </a>
-        </li>
+
 
         <li class="items-center">
           <a
-            [routerLink]="['/admin/settings']"
+            [routerLink]="['/admin/users']"
             class="text-xs uppercase py-3 font-bold block"
             routerLinkActive
-            #adminSettings="routerLinkActive"
+            #adminUsers="routerLinkActive"
             [ngClass]="
-              adminSettings.isActive
+            adminUsers.isActive
                 ? 'text-red-600 hover:text-red-700'
                 : 'text-blueGray-700 hover:text-blueGray-500'
             "
           >
             <i
-              class="fas fa-tools mr-2 text-sm"
+              class="fas fa-users mr-2 text-sm"
               [ngClass]="
-                adminSettings.isActive ? 'opacity-75' : 'text-blueGray-300'
+                adminUsers.isActive ? 'opacity-75' : 'text-blueGray-300'
               "
             ></i>
-            Settings
+            Users
           </a>
         </li>
-
         <li class="items-center">
           <a
-            [routerLink]="['/admin/tables']"
+            [routerLink]="['/admin/games']"
             class="text-xs uppercase py-3 font-bold block"
             routerLinkActive
-            #adminTables="routerLinkActive"
+            #adminGames="routerLinkActive"
             [ngClass]="
-              adminTables.isActive
+            adminGames.isActive
                 ? 'text-red-600 hover:text-red-700'
                 : 'text-blueGray-700 hover:text-blueGray-500'
             "
           >
             <i
-              class="fas fa-table mr-2 text-sm"
+              class="fas fa-gamepad mr-2 text-sm"
               [ngClass]="
-                adminTables.isActive ? 'opacity-75' : 'text-blueGray-300'
+                adminGames.isActive ? 'opacity-75' : 'text-blueGray-300'
               "
             ></i>
-            Tables
-          </a>
-        </li>
-
-        <li class="items-center">
-          <a
-            [routerLink]="['/admin/maps']"
-            class="text-xs uppercase py-3 font-bold block"
-            routerLinkActive
-            #adminMaps="routerLinkActive"
-            [ngClass]="
-              adminMaps.isActive
-                ? 'text-red-600 hover:text-red-700'
-                : 'text-blueGray-700 hover:text-blueGray-500'
-            "
-          >
-            <i
-              class="fas fa-map-marked mr-2 text-sm"
-              [ngClass]="
-                adminMaps.isActive ? 'opacity-75' : 'text-blueGray-300'
-              "
-            ></i>
-            Maps
+            Games
           </a>
         </li>
       </ul>

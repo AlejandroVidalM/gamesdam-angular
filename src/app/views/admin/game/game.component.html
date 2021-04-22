@@ -162,29 +162,29 @@
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
             <i [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.steam == true, 'text-red-500': game.steam != true}"></i>
-            <span *ngIf="game.steam; else inactive">Activo</span>
-            <ng-template #inactive>Inactivo</ng-template>
+            <span *ngIf="game.steam; else notAvailable">Disponible</span>
+            <ng-template #notAvailable>No disponible</ng-template>
           </td>
           <td
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
             <i [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.ps5 == true, 'text-red-500': game.ps5 != true}"></i>
-            <span *ngIf="game.ps5; else inactive">Activo</span>
-            <ng-template #inactive>Inactivo</ng-template>
+            <span *ngIf="game.ps5; else notAvailable">Disponible</span>
+            <ng-template #notAvailable>No disponible</ng-template>
           </td>
           <td
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
             <i [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.xboxX == true, 'text-red-500': game.xboxX != true}"></i>
-            <span *ngIf="game.xboxX; else inactive">Activo</span>
-            <ng-template #inactive>Inactivo</ng-template>
+            <span *ngIf="game.xboxX; else notAvailable">Disponible</span>
+            <ng-template #notAvailable>No disponible</ng-template>
           </td>
           <td
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
             <i [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.nintendoSwitch == true, 'text-red-500': game.nintendoSwitch != true}"></i>
-            <span *ngIf="game.nintendoSwitch; else inactive">Activo</span>
-            <ng-template #inactive>Inactivo</ng-template>
+            <span *ngIf="game.nintendoSwitch; else notAvailable">Disponible</span>
+            <ng-template #notAvailable>No disponible</ng-template>
           </td>
           <td
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
