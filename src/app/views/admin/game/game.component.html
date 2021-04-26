@@ -1,14 +1,19 @@
-<div
-  class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded"
-  [ngClass]="color === 'light' ? 'bg-white' : 'bg-red-900 text-white'"
->
+<div class="relative flex flex-col min-w-0 break-words w-full mb-6 shadow-lg rounded"
+  [ngClass]="color === 'light' ? 'bg-white' : 'bg-red-900 text-white'">
   <div class="rounded-t mb-0 px-4 py-3 border-0">
+
+    <div class="text-center flex justify-between">
+      <h6 class="text-blueGray-700 text-xl font-bold">Games</h6>
+      <button
+        class="bg-red-600 text-white active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
+        type="button" [routerLink]="['/admin/games/new']">
+        New game
+      </button>
+    </div>
+
     <div class="flex flex-wrap items-center">
       <div class="relative w-full px-4 max-w-full flex-grow flex-1">
-        <h3
-          class="font-semibold text-lg"
-          [ngClass]="color === 'light' ? 'text-blueGray-700' : 'text-white'"
-        >
+        <h3 class="font-semibold text-lg" [ngClass]="color === 'light' ? 'text-blueGray-700' : 'text-white'">
           {{ title }}
         </h3>
       </div>
@@ -25,9 +30,8 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            "
-          >
-            Name
+            ">
+            {{ 'admin.pages.games.name' | translate }}
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -62,8 +66,7 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            "
-          >
+            ">
             Steam
           </th>
           <th
@@ -72,8 +75,7 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            "
-          >
+            ">
             PS5
           </th>
           <th
@@ -82,8 +84,7 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            "
-          >
+            ">
             XBOX X
           </th>
           <th
@@ -92,8 +93,7 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            "
-          >
+            ">
             Nintendo Switch
           </th>
           <th
@@ -102,18 +102,7 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            "
-          >
-            Estado
-          </th>
-          <th
-            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
-            "
-          >
+            ">
             ID
           </th>
           <th
@@ -122,85 +111,55 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            "
-          ></th>
+            "></th>
         </tr>
       </thead>
       <tbody>
         <tr *ngFor="let game of gameList">
           <th
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center"
-          >
-            <img
-              [src]="game.photoURL"
-              class="h-12 w-12 bg-white rounded-full border"
-              alt="..."
-            />
-            <span
-              class="ml-3 font-bold"
-              [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'"
-            >
+            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-left flex items-center">
+            <img [src]="game.photoURL" class="h-12 w-12 bg-white border" alt="..." />
+            <span class="ml-3 font-bold" [ngClass]="color === 'light' ? 'text-blueGray-600' : 'text-white'">
               {{game.name}}
             </span>
           </th>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
             {{game.developer}}
           </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
             {{game.rating}}
           </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
             {{game.year}}
           </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-            <i [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.steam == true, 'text-red-500': game.steam != true}"></i>
-            <span *ngIf="game.steam; else inactive">Activo</span>
-            <ng-template #inactive>Inactivo</ng-template>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <i
+              [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.steam == true, 'text-red-500': game.steam != true}"></i>
+            <span *ngIf="game.steam; else inactive">Disponible</span>
+            <ng-template #inactive>No disponible</ng-template>
           </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-            <i [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.ps5 == true, 'text-red-500': game.ps5 != true}"></i>
-            <span *ngIf="game.ps5; else inactive">Activo</span>
-            <ng-template #inactive>Inactivo</ng-template>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <i
+              [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.ps5 == true, 'text-red-500': game.ps5 != true}"></i>
+            <span *ngIf="game.ps5; else inactive">Disponible</span>
+            <ng-template #inactive>No disponible</ng-template>
           </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-            <i [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.xboxX == true, 'text-red-500': game.xboxX != true}"></i>
-            <span *ngIf="game.xboxX; else inactive">Activo</span>
-            <ng-template #inactive>Inactivo</ng-template>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <i
+              [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.xboxX == true, 'text-red-500': game.xboxX != true}"></i>
+            <span *ngIf="game.xboxX; else inactive">Disponible</span>
+            <ng-template #inactive>No disponible</ng-template>
           </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-            <i [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.nintendoSwitch == true, 'text-red-500': game.nintendoSwitch != true}"></i>
-            <span *ngIf="game.nintendoSwitch; else inactive">Activo</span>
-            <ng-template #inactive>Inactivo</ng-template>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            <i
+              [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.nintendoSwitch == true, 'text-red-500': game.nintendoSwitch != true}"></i>
+            <span *ngIf="game.nintendoSwitch; else inactive">Disponible</span>
+            <ng-template #inactive>No disponible</ng-template>
           </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-            <i [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.active == true, 'text-red-500': game.active != true}"></i>
-            <span *ngIf="game.active; else inactive">Activo</span>
-            <ng-template #inactive>Inactivo</ng-template>
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
+            {{game.uid}}
           </td>
-          <td
-          class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
-          >
-           {{game.uid}}
-        </td>
-          <td
-            class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right"
-          >
+          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
             <app-table-dropdown></app-table-dropdown>
           </td>
         </tr>

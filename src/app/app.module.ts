@@ -59,6 +59,7 @@ import { UsersListComponent } from './views/admin/users-list/users-list.componen
 import { GameComponent } from './views/admin/game/game.component';
 import { ReactiveFormsModule } from '@angular/forms';
 import { GameNewComponent } from './views/admin/game-new/game-new.component';
+import { TableDropdownUserComponent } from "./components/dropdowns/table-dropdown-user/table-dropdown-user.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -72,6 +73,7 @@ export function HttpLoaderFactory(http: HttpClient) {
     IndexDropdownComponent,
     PagesDropdownComponent,
     TableDropdownComponent,
+    TableDropdownUserComponent,
     NotificationDropdownComponent,
     UserDropdownComponent,
     SidebarComponent,

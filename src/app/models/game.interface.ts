@@ -9,6 +9,5 @@ export interface Game {
     ps5: boolean;
     xboxX: boolean;
     nintendoSwitch: boolean;
-    active: boolean;
   }
   

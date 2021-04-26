@@ -23,7 +23,9 @@ export class GameComponent implements OnInit {
   ngOnInit(): void {
     this.gameService.getGames().subscribe(resp => {
       this.gameList = resp.map(e => {
-        return e.payload.doc.data() as Game;
+        let game = e.payload.doc.data() as Game;
+        game.uid = e.payload.doc.id;
+        return game;
       });
     });
   }

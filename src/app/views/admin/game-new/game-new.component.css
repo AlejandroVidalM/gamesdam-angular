@@ -11,7 +11,6 @@ ul {
   }
   
   label {
-    border: 1px solid #fff;
     padding: 10px;
     display: block;
     position: relative;
@@ -46,6 +45,7 @@ ul {
   
   :checked + label {
     border-color: #ddd;
+    background-color: #00000050;
   }
   
   :checked + label:before {

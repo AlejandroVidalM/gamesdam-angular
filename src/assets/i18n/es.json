@@ -1,0 +1,74 @@
+{
+    "global": {
+        "app_title": "VisitOn",
+        "lang": {
+            "fr": "Francés",
+            "es": "Español",
+            "en": "Inglés",
+            "it": "Italiano",
+            "eu": "Euskera"
+        }
+    },
+    "home": {
+        "navbar": {
+            "login": "Iniciar sesión",
+            "": ""
+        },
+        "header": {
+            "title": "",
+            "subtitle": "",
+            "box1_title": "",
+            "box1_subtitle": "",
+            "box2_title": "",
+            "box2_subtitle": "",
+            "box3_title": "",
+            "box3_subtitle": ""
+        },
+        "content": {
+
+        },
+        "footer": {
+            "about_us": "Sobre nosotros",
+            "school_links": "Participantes",
+            "other_links": "Otros enlaces",
+            "keep_in_touch": "¡Contáctanos!",
+            "find_us_text": "Encuéntranos en cualquiera de las siguientes redes sociales",
+            "terms_and_conditions": "Términos y condiciones",
+            "privacy_policy": "Política de Privacidad",
+            "contact_us": "Contacta con nosotros"
+        },
+        "footer_small": {
+            "about_us": "Sobre nosotros"
+        }
+    },
+    "admin": {
+
+    },
+    "auth": {
+        "login": {
+            "email_label": "Email",
+            "email_hint": "Email",
+            "password_label": "Contraseña",
+            "password_hint": "Contraseña",
+            "forgot_password": "¿Olvidaste tu contraseña?",
+            "create_new_account": "Crear una cuenta",
+            "or_signin_with_credentials": "O iniciar sesión con credenciales",
+            "sign_in_with": "Iniciar sesión con",
+            "sign_in": "Iniciar sesión",
+            "remember_me": "Recordarme"
+        },
+        "register": {
+            "or_signup_with_credentials": "O registrarse con credenciales",
+            "name_label": "Nombre",
+            "name_hint": "Nombre",
+            "email_label": "Email",
+            "email_hint": "Email",
+            "password_label": "Contraseña",
+            "password_hint": "Contraseña",
+            "sign_up_with": "Registrarse con",
+            "create_account": "Crear una cuenta",
+            "privacy_policy": "Política de Privacidad",
+            "i_agree_with": "Estoy de acuerdo con la"
+        }
+    }
+}
