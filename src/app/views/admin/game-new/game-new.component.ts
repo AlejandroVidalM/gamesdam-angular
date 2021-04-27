@@ -24,6 +24,7 @@ export class GameNewComponent implements OnInit {
 
 
   onSubmit() {
+
   }
 
   ngOnInit(): void {

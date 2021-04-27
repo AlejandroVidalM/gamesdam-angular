@@ -1,15 +1,15 @@
 ul {
     list-style-type: none;
   }
-  
+
   li {
     display: inline-block;
   }
-  
+
   input[type="checkbox"][id^="myCheckbox"] {
     display: none;
   }
-  
+
   label {
     padding: 10px;
     display: block;
@@ -17,7 +17,7 @@ ul {
     margin: 10px;
     cursor: pointer;
   }
-  
+
   label:before {
     background-color: white;
     color: white;
@@ -35,25 +35,25 @@ ul {
     transition-duration: 0.4s;
     transform: scale(0);
   }
-  
+
   label img {
     height: 110px;
     width: 200px;
     transition-duration: 0.2s;
     transform-origin: 50% 50%;
   }
-  
+
   :checked + label {
     border-color: #ddd;
     background-color: #00000050;
   }
-  
+
   :checked + label:before {
     content: "✓";
     background-color: grey;
     transform: scale(1);
   }
-  
+
   :checked + label img {
     transform: scale(0.9);
     /* box-shadow: 0 0 5px #333; */
