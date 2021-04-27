@@ -1,12 +1,10 @@
 {
     "global": {
-        "app_title": "VisitOn",
+        "app_title": "GamesDam",
         "lang": {
-            "fr": "Francés",
             "es": "Español",
             "en": "Inglés",
-            "it": "Italiano",
-            "eu": "Euskera"
+            "select": "Selecciona un idioma"
         }
     },
     "home": {
@@ -29,8 +27,6 @@
         },
         "footer": {
             "about_us": "Sobre nosotros",
-            "school_links": "Participantes",
-            "other_links": "Otros enlaces",
             "keep_in_touch": "¡Contáctanos!",
             "find_us_text": "Encuéntranos en cualquiera de las siguientes redes sociales",
             "terms_and_conditions": "Términos y condiciones",
@@ -42,7 +38,26 @@
         }
     },
     "admin": {
-
+        "pages": {
+            "users":{
+                "title": "Usuarios"
+            },
+            "games": {
+                "title": "Juegos",
+                "name": "Nombre",
+                "developer": "Desarrollador",
+                "rating": "Valoración",
+                "year": "Año",
+                "game":{
+                    "status_true": "Disponible",
+                    "status_false": "No disponible"
+                },
+                "new_game": {
+                    "title": "Nuevo juego",
+                    "save": "Guardar juego"
+                }
+            }
+        }
     },
     "auth": {
         "login": {

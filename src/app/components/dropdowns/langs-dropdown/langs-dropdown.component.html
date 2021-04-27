@@ -6,7 +6,7 @@
 <div class="bg-white text-base z-50 float-left py-2 list-none text-left rounded shadow-lg min-w-48"
     [ngClass]="dropdownPopoverShow ? 'block' : 'hidden'" #popoverDropdownRefLang>
     <span class="text-sm pt-2 pb-0 px-4 font-bold block w-full whitespace-nowrap bg-transparent text-blueGray-400">
-        Selecciona un idioma
+        {{'global.lang.select' | translate }}
     </span>
     <div *ngFor="let lang of langs">
         <a href="#" (click)="switchLang($event,lang)" *ngIf="lang !== selectedLang"

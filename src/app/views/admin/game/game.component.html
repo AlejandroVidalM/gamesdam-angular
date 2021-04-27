@@ -3,11 +3,11 @@
   <div class="rounded-t mb-0 px-4 py-3 border-0">
 
     <div class="text-center flex justify-between">
-      <h6 class="text-blueGray-700 text-xl font-bold">Games</h6>
+      <h6 class="text-blueGray-700 text-xl font-bold">{{ 'admin.pages.games.title' | translate }}</h6>
       <button
         class="bg-red-600 text-white active:bg-red-700 font-bold uppercase text-xs px-4 py-2 rounded shadow hover:shadow-md outline-none focus:outline-none mr-1 ease-linear transition-all duration-150"
         type="button" [routerLink]="['/admin/games/new']">
-        New game
+        {{ 'admin.pages.games.new_game.title' | translate }}
       </button>
     </div>
 
@@ -40,7 +40,7 @@
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
             ">
-            Developer
+            {{ 'admin.pages.games.developer' | translate }}
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -49,7 +49,7 @@
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
             ">
-            Rating
+            {{ 'admin.pages.games.rating' | translate }}
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -58,7 +58,7 @@
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
             ">
-            Year
+            {{ 'admin.pages.games.year' | translate }}
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -135,27 +135,27 @@
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
             <i
               [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.steam == true, 'text-red-500': game.steam != true}"></i>
-            <span *ngIf="game.steam; else inactive">Disponible</span>
-            <ng-template #inactive>No disponible</ng-template>
+            <span *ngIf="game.steam; else inactive">{{ 'admin.pages.games.game.status_true' | translate }}</span>
+            <ng-template #inactive>{{ 'admin.pages.games.game.status_false' | translate }}</ng-template>
           </td>
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
             <i
               [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.ps5 == true, 'text-red-500': game.ps5 != true}"></i>
-            <span *ngIf="game.ps5; else inactive">Disponible</span>
-            <ng-template #inactive>No disponible</ng-template>
-          </td>
+              <span *ngIf="game.ps5; else inactive">{{ 'admin.pages.games.game.status_true' | translate }}</span>
+              <ng-template #inactive>{{ 'admin.pages.games.game.status_false' | translate }}</ng-template>
+            </td>
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
             <i
               [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.xboxX == true, 'text-red-500': game.xboxX != true}"></i>
-            <span *ngIf="game.xboxX; else inactive">Disponible</span>
-            <ng-template #inactive>No disponible</ng-template>
-          </td>
+              <span *ngIf="game.xboxX; else inactive">{{ 'admin.pages.games.game.status_true' | translate }}</span>
+              <ng-template #inactive>{{ 'admin.pages.games.game.status_false' | translate }}</ng-template>
+            </td>
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
             <i
               [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': game.nintendoSwitch == true, 'text-red-500': game.nintendoSwitch != true}"></i>
-            <span *ngIf="game.nintendoSwitch; else inactive">Disponible</span>
-            <ng-template #inactive>No disponible</ng-template>
-          </td>
+              <span *ngIf="game.nintendoSwitch; else inactive">{{ 'admin.pages.games.game.status_true' | translate }}</span>
+              <ng-template #inactive>{{ 'admin.pages.games.game.status_false' | translate }}</ng-template>
+            </td>
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
             {{game.uid}}
           </td>
