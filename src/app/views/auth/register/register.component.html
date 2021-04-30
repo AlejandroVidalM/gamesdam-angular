@@ -6,7 +6,7 @@
       >
         <div class="rounded-t mb-0 px-6 py-6">
           <div class="text-center mb-3">
-            <h6 class="text-blueGray-500 text-sm font-bold">Sign up with</h6>
+            <h6 class="text-blueGray-500 text-sm font-bold">{{'auth.register.sign_up_with' | translate}}</h6>
           </div>
           <div class="btn-wrapper text-center">
             <button
@@ -28,7 +28,7 @@
         </div>
         <div class="flex-auto px-4 lg:px-10 py-10 pt-0">
           <div class="text-blueGray-400 text-center mb-3 font-bold">
-            <small>Or sign up with credentials</small>
+            <small>{{'auth.register.or_signup_with_credentials' | translate}}</small>
           </div>
           <form>
             <div class="relative w-full mb-3">
@@ -36,12 +36,12 @@
                 class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                 htmlFor="grid-password"
               >
-                Name
+              {{'auth.register.name_label' | translate}}
               </label>
               <input
                 type="email"
                 class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                placeholder="Name"
+                placeholder="{{'auth.register.name_hint' | translate}}"
               />
             </div>
 
@@ -50,12 +50,12 @@
                 class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                 htmlFor="grid-password"
               >
-                Email
+              {{'auth.register.email_label' | translate}}
               </label>
               <input
                 type="email"
                 class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                placeholder="Email"
+                placeholder="{{'auth.login.email_hint' | translate}}"
               />
             </div>
 
@@ -64,12 +64,12 @@
                 class="block uppercase text-blueGray-600 text-xs font-bold mb-2"
                 htmlFor="grid-password"
               >
-                Password
+              {{'auth.register.password_label' | translate}}
               </label>
               <input
                 type="password"
                 class="border-0 px-3 py-3 placeholder-blueGray-300 text-blueGray-600 bg-white rounded text-sm shadow focus:outline-none focus:ring w-full ease-linear transition-all duration-150"
-                placeholder="Password"
+                placeholder="{{'auth.register.password_hint' | translate}}"
               />
             </div>
 
@@ -81,9 +81,9 @@
                   class="form-checkbox border-0 text-blueGray-700 ml-1 w-5 h-5 ease-linear transition-all duration-150 rounded"
                 />
                 <span class="ml-2 text-sm font-semibold text-blueGray-600">
-                  I agree with the
+                  {{'auth.register.i_agree_with' | translate}}
                   <a href="javascript:void(0)" class="text-red-600">
-                    Privacy Policy
+                    {{'auth.register.privacy_policy' | translate}}
                   </a>
                 </span>
               </label>
@@ -94,7 +94,7 @@
                 class="bg-blueGray-800 text-white active:bg-blueGray-600 text-sm font-bold uppercase px-6 py-3 rounded shadow hover:shadow-lg outline-none focus:outline-none mr-1 mb-1 w-full ease-linear transition-all duration-150"
                 type="button"
               >
-                Create Account
+              {{'auth.register.create_account' | translate}}
               </button>
             </div>
           </form>

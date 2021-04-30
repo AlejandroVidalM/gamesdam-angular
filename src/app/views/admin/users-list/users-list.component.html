@@ -27,7 +27,7 @@
                 : 'bg-red-800 text-red-300 border-red-700'
             "
           >
-            Usuario
+          {{'admin.pages.users.user' | translate}}
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -46,7 +46,8 @@
                 : 'bg-red-800 text-red-300 border-red-700'
             "
           >
-            Estado
+          
+          {{'admin.pages.users.status.title' | translate}}
           </th>
           <th
             class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
@@ -94,8 +95,9 @@
             class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
           >
             <i [ngClass]="{'fas fa-circle mr-2': true, 'text-emerald-500': user.active == true, 'text-red-500': user.active != true}"></i>
-            <span *ngIf="user.active; else inactive">Activo</span>
-            <ng-template #inactive>Inactivo</ng-template>
+            <span *ngIf="user.active; else inactive">
+              {{'admin.pages.users.status.true' | translate}}</span>
+            <ng-template #inactive>{{'admin.pages.users.status.false' | translate}}</ng-template>
           </td>
           <td
           class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4"
