@@ -102,15 +102,6 @@
               color === 'light'
                 ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
                 : 'bg-red-800 text-red-300 border-red-700'
-            ">
-            ID
-          </th>
-          <th
-            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
-            [ngClass]="
-              color === 'light'
-                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
-                : 'bg-red-800 text-red-300 border-red-700'
             "></th>
         </tr>
       </thead>
@@ -156,11 +147,8 @@
               <span *ngIf="game.nintendoSwitch; else inactive">{{ 'admin.pages.games.game.status_true' | translate }}</span>
               <ng-template #inactive>{{ 'admin.pages.games.game.status_false' | translate }}</ng-template>
             </td>
-          <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-            {{game.uid}}
-          </td>
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-            <app-table-dropdown></app-table-dropdown>
+            <app-table-dropdown [uid]="game.uid"></app-table-dropdown>
           </td>
         </tr>
       </tbody>

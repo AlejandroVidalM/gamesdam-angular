@@ -61,6 +61,7 @@ import { ReactiveFormsModule } from '@angular/forms';
 import { GameNewComponent } from './views/admin/game-new/game-new.component';
 import { TableDropdownUserComponent } from "./components/dropdowns/table-dropdown-user/table-dropdown-user.component";
 import { LangsDropdownComponent } from './components/dropdowns/langs-dropdown/langs-dropdown.component';
+import { LanguageService } from "./services/language.service";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -124,7 +125,7 @@ export function HttpLoaderFactory(http: HttpClient) {
   }),
   ReactiveFormsModule
   ],
-  providers: [],
+  providers: [LanguageService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}

@@ -38,7 +38,8 @@ const routes: Routes = [
       { path: "users", component: UsersListComponent },
       { path: "games", component: GameComponent },
       { path: "games/new", component: GameNewComponent},
-      { path: "", redirectTo: "dashboard", pathMatch: "full" },
+      { path: "games/edit/:id", component: GameNewComponent},
+      { path: "", redirectTo: "dashboard", pathMatch: "full" }
     ],
   },
   // auth views
@@ -48,14 +49,14 @@ const routes: Routes = [
     children: [
       { path: "login", component: LoginComponent },
       { path: "register", component: RegisterComponent },
-      { path: "", redirectTo: "login", pathMatch: "full" },
+      { path: "", redirectTo: "login", pathMatch: "full" }
     ],
   },
   // no layout views
   { path: "profile", component: ProfileComponent },
   { path: "landing", component: LandingComponent },
   { path: "", redirectTo: "auth/login",  pathMatch: "full" },
-  { path: "**", redirectTo: "admin/dashboard", pathMatch: "full" },
+  { path: "**", redirectTo: "admin/dashboard", pathMatch: "full" }
 ];
 
 @NgModule({
