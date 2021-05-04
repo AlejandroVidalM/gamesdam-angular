@@ -1,11 +1,14 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, Input } from "@angular/core";
 import { createPopper } from "@popperjs/core";
+import { GameService } from "src/app/services/game.service";
 
 @Component({
   selector: "app-table-dropdown",
   templateUrl: "./table-dropdown.component.html",
 })
 export class TableDropdownComponent implements AfterViewInit {
+  
+  constructor(private gameService : GameService) { }
   dropdownPopoverShow = false;
   @Input() uid;
   @ViewChild("btnDropdownRef", { static: false }) btnDropdownRef: ElementRef;
@@ -27,5 +30,10 @@ export class TableDropdownComponent implements AfterViewInit {
     } else {
       this.dropdownPopoverShow = true;
     }
+  }
+  
+  deleteGame(uid): void {
+    console.log("funciona? "+uid);
+    this.gameService.deleteGame(uid);
   }
 }

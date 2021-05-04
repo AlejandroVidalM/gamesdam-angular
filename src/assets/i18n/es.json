@@ -41,10 +41,10 @@
         "title": "Usuarios",
         "user": "Usuario",
         "status": {
-            "title": "Estado",
-            "true": "Disponible",
-            "false": "No disponible"
-          }
+          "title": "Estado",
+          "true": "Disponible",
+          "false": "No disponible"
+        }
       },
       "games": {
         "title": "Juegos",

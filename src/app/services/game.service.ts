@@ -25,4 +25,9 @@ export class GameService {
   getGame(id: string) {
     return this.firestore.doc<Game>(`games/${id}`).valueChanges();
   }
+  
+  deleteGame(id: string) {
+    const gameRef: AngularFirestoreDocument<Game> = this.firestore.doc(`games/${id}`);
+    gameRef.delete();
+  }
 }
