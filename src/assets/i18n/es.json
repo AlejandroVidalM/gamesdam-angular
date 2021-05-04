@@ -89,5 +89,14 @@
       "privacy_policy": "Política de Privacidad",
       "i_agree_with": "Estoy de acuerdo con la"
     }
+  },
+  "components": {
+    "dropdowns": {
+      "table_dropdown": {
+        "edit": "Editar",
+        "delete": "Borrar",
+        "message": "¿Deseas eliminar este elemento?"
+      }
+    }
   }
 }

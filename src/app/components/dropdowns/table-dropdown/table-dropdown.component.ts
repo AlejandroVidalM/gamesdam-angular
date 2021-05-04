@@ -1,4 +1,5 @@
 import { Component, AfterViewInit, ViewChild, ElementRef, Input } from "@angular/core";
+import { TranslateService } from "@ngx-translate/core";
 import { createPopper } from "@popperjs/core";
 import { GameService } from "src/app/services/game.service";
 
@@ -8,9 +9,11 @@ import { GameService } from "src/app/services/game.service";
 })
 export class TableDropdownComponent implements AfterViewInit {
   
-  constructor(private gameService : GameService) { }
+  constructor(private gameService : GameService, private translate: TranslateService) {
+  }
   dropdownPopoverShow = false;
   @Input() uid;
+  @Input() entidad;
   @ViewChild("btnDropdownRef", { static: false }) btnDropdownRef: ElementRef;
   @ViewChild("popoverDropdownRef", { static: false })
   popoverDropdownRef: ElementRef;
@@ -33,7 +36,11 @@ export class TableDropdownComponent implements AfterViewInit {
   }
   
   deleteGame(uid): void {
-    console.log("funciona? "+uid);
-    this.gameService.deleteGame(uid);
+    
+    if (confirm(this.translate.instant('components.dropdowns.table_dropdown.message'))) {
+      if(this.entidad == "game") {
+        this.gameService.deleteGame(uid);
+      }
+    }
   }
 }

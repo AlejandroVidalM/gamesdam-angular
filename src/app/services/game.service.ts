@@ -19,7 +19,7 @@ export class GameService {
     const gameRef: AngularFirestoreDocument<Game> = this.firestore.doc(`games/${game.uid}`);
     
     gameRef.set(game, {merge: true})
-    this.router.navigate(['/games']);
+    this.router.navigate(['/admin/games']);
   }
   
   getGame(id: string) {

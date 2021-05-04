@@ -15,13 +15,14 @@
     [routerLink]="['/admin/games/edit', uid]"
       class="fas fa-edit text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
     >
-      Editar
+      
+    {{'components.dropdowns.table_dropdown.edit' | translate}}
     </button>
     <button
       (click)="deleteGame(uid)"
       class="fas fa-trash-alt text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
     >
-      Borrar
+    {{'components.dropdowns.table_dropdown.delete' | translate}}
     </button>
   </div>
 </div>
