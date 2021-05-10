@@ -48,8 +48,6 @@ export class GameNewComponent implements OnInit {
         Object.keys(this.newGameForm.controls).forEach(keyElemento => {
           this.newGameForm.controls[keyElemento].setValue(resp[keyElemento]);
         });
-
-        console.log("Editando " + this.game);
       });
     }
   }

@@ -62,6 +62,8 @@ import { GameNewComponent } from './views/admin/game-new/game-new.component';
 import { TableDropdownUserComponent } from "./components/dropdowns/table-dropdown-user/table-dropdown-user.component";
 import { LangsDropdownComponent } from './components/dropdowns/langs-dropdown/langs-dropdown.component';
 import { LanguageService } from "./services/language.service";
+import { CategoryComponent } from './views/admin/category/category.component';
+import { CategoryNewComponent } from "./views/admin/category-new/category-new.component";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
@@ -106,7 +108,9 @@ export function HttpLoaderFactory(http: HttpClient) {
     UsersListComponent,
     GameComponent,
     GameNewComponent,
-    LangsDropdownComponent
+    LangsDropdownComponent,
+    CategoryComponent,
+    CategoryNewComponent
   ],
   imports: [
     BrowserModule,

@@ -60,7 +60,22 @@
           "title": "Nuevo juego",
           "save": "Guardar juego"
         }
+      },
+      "categories": {
+        "title": "Categorías",
+        "name": "Nombre",
+        "icon": "Icono",
+        "new_category": {
+          "title": "Nueva categoría",
+          "save": "Guardar categoría"
+        }
       }
+    },
+    "sidebar": {
+      "admin_pages": "Páginas de administración",
+      "auth_pages": "Páginas de autenticación",
+      "login": "Inicio de sesión",
+      "register": "Registro"
     }
   },
   "auth": {

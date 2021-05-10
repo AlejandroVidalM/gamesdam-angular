@@ -24,6 +24,8 @@ import { IndexComponent } from "./views/index/index.component";
 import { LandingComponent } from "./views/landing/landing.component";
 import { ProfileComponent } from "./views/profile/profile.component";
 import { GameNewComponent } from './views/admin/game-new/game-new.component';
+import { CategoryComponent } from "./views/admin/category/category.component";
+import { CategoryNewComponent } from "./views/admin/category-new/category-new.component";
 
 const routes: Routes = [
   // admin views
@@ -38,6 +40,8 @@ const routes: Routes = [
       { path: "users", component: UsersListComponent },
       { path: "games", component: GameComponent },
       { path: "games/new", component: GameNewComponent},
+      { path: "categories", component: CategoryComponent },
+      { path: "categories/new", component: CategoryNewComponent},
       { path: "games/edit/:id", component: GameNewComponent},
       { path: "", redirectTo: "dashboard", pathMatch: "full" }
     ],

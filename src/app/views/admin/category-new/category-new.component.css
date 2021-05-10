@@ -1,0 +1,17 @@
+ul {
+    list-style-type: none;
+  }
+
+  li {
+    display: inline-block;
+  }
+
+
+  label {
+    padding: 10px;
+    display: block;
+    position: relative;
+    margin: 10px;
+    cursor: pointer;
+  }
+
