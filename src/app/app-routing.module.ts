@@ -43,6 +43,7 @@ const routes: Routes = [
       { path: "categories", component: CategoryComponent },
       { path: "categories/new", component: CategoryNewComponent},
       { path: "games/edit/:id", component: GameNewComponent},
+      { path: "categories/edit/:id", component: CategoryNewComponent},
       { path: "", redirectTo: "dashboard", pathMatch: "full" }
     ],
   },

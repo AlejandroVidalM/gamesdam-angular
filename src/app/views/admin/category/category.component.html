@@ -42,6 +42,13 @@
             ">
             {{ 'admin.pages.categories.icon' | translate }}
           </th>
+          <th
+            class="px-6 align-middle border border-solid py-3 text-xs uppercase border-l-0 border-r-0 whitespace-nowrap font-semibold text-left"
+            [ngClass]="
+              color === 'light'
+                ? 'bg-blueGray-50 text-blueGray-500 border-blueGray-100'
+                : 'bg-red-800 text-red-300 border-red-700'
+            "></th>
         </tr>
       </thead>
       <tbody>
@@ -53,10 +60,11 @@
             </span>
           </th>
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-            <span class="fas {{category.icon}} fa-3x"></span>
+            <i class="fas {{category.icon}} fa-3x"></i>
+            <!-- poner aqui el app-table dentro de un p o algo asi -->
           </td>
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-            <app-table-dropdown [uid]="category.uid" entidad="category"></app-table-dropdown>
+            <app-table-dropdown [id]="category.id" entidad="category"></app-table-dropdown>
           </td>
         </tr>
       </tbody>

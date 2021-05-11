@@ -26,4 +26,9 @@ export class CategoryService {
     categoryRef.set(category, {merge: true})
     this.router.navigate(['/admin/categories']);
   }
+  
+  deleteCategory(id:string) {
+    const categoryRef: AngularFirestoreDocument<Category> = this.firestore.doc(`categories/${id}`);
+    categoryRef.delete();
+  }
 }

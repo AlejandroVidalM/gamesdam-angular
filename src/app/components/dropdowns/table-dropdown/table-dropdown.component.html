@@ -1,28 +1,18 @@
-<a
-  class="text-blueGray-500 block py-1 px-3"
-  href="#pablo"
-  (click)="toggleDropdown($event)"
-  #btnDropdownRef
->
+<a class="text-blueGray-500 block py-1 px-3" href="#pablo" (click)="toggleDropdown($event)" #btnDropdownRef>
   <i class="fas fa-ellipsis-v"></i>
 </a>
 <div class="min-w-48 z-50" #popoverDropdownRef>
-  <div
-    class="bg-white text-base float-left py-2 list-none text-left rounded shadow-lg mt-1 min-w-48"
-    [ngClass]="dropdownPopoverShow ? 'block' : 'hidden'"
-  >
-    <button
-    [routerLink]="['/admin/games/edit', uid]"
-      class="fas fa-edit text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-    >
-      
-    {{'components.dropdowns.table_dropdown.edit' | translate}}
+  <div class="bg-white text-base float-left py-2 list-none text-left rounded shadow-lg mt-1 min-w-48"
+    [ngClass]="dropdownPopoverShow ? 'block' : 'hidden'">
+    <button (click)="editEntity(id)"
+      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+      <i class="fas fa-edit"></i>
+      {{'components.dropdowns.table_dropdown.edit' | translate}}
     </button>
-    <button
-      (click)="deleteGame(uid)"
-      class="fas fa-trash-alt text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700"
-    >
-    {{'components.dropdowns.table_dropdown.delete' | translate}}
+    <button (click)="deleteEntity(id)"
+      class="text-sm py-2 px-4 font-normal block w-full whitespace-nowrap bg-transparent text-blueGray-700">
+      <i class="fas fa-trash-alt"></i>
+      {{'components.dropdowns.table_dropdown.delete' | translate}}
     </button>
   </div>
 </div>
