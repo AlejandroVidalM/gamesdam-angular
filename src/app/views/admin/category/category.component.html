@@ -60,11 +60,12 @@
             </span>
           </th>
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4">
-            <i class="fas {{category.icon}} fa-3x"></i>
-            <!-- poner aqui el app-table dentro de un p o algo asi -->
+              <i class="fas fa-{{category.icon}} fa-3x"></i>
           </td>
           <td class="border-t-0 px-6 align-middle border-l-0 border-r-0 text-xs whitespace-nowrap p-4 text-right">
-            <app-table-dropdown [id]="category.id" entidad="category"></app-table-dropdown>
+            <div class="text-right float-right ancho-25">
+              <app-table-dropdown [id]="category.id" entidad="category"></app-table-dropdown>
+            </div>
           </td>
         </tr>
       </tbody>

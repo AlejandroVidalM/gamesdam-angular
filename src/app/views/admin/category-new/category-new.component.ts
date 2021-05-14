@@ -1,4 +1,5 @@
-import { Component, OnInit } from '@angular/core';
+import { ElementRef } from '@angular/core';
+import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
 import { Category } from 'src/app/models/category';
@@ -17,9 +18,9 @@ export class CategoryNewComponent implements OnInit {
     name: new FormControl(''),
     icon: new FormControl('')
   });
+  icon = undefined;
+
   constructor(private categoryService: CategoryService, private route: ActivatedRoute) { }
-
-
   
   onSubmit() {
 
@@ -45,5 +46,6 @@ export class CategoryNewComponent implements OnInit {
       });
     }
   }
+
 
 }

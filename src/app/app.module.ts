@@ -57,7 +57,7 @@ import {HttpClientModule, HttpClient} from '@angular/common/http';
 import { TranslateHttpLoader } from '@ngx-translate/http-loader';
 import { UsersListComponent } from './views/admin/users-list/users-list.component';
 import { GameComponent } from './views/admin/game/game.component';
-import { ReactiveFormsModule } from '@angular/forms';
+import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { GameNewComponent } from './views/admin/game-new/game-new.component';
 import { TableDropdownUserComponent } from "./components/dropdowns/table-dropdown-user/table-dropdown-user.component";
 import { LangsDropdownComponent } from './components/dropdowns/langs-dropdown/langs-dropdown.component';
@@ -127,7 +127,8 @@ export function HttpLoaderFactory(http: HttpClient) {
           deps: [HttpClient]
       }
   }),
-  ReactiveFormsModule
+  ReactiveFormsModule,
+  FormsModule,
   ],
   providers: [LanguageService],
   bootstrap: [AppComponent],
