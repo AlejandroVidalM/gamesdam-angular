@@ -5,6 +5,7 @@ import { Router } from '@angular/router';
 import firebase from 'firebase/app';
 import { Observable, of } from 'rxjs';
 import { switchMap } from 'rxjs/operators';
+import * as uuid from 'uuid';
 
 import { User } from '../models/user.interface';
 @Injectable({
@@ -47,11 +48,28 @@ export class AuthService {
       email: user.email,
       displayName: user.displayName,
       photoURL: user.photoURL,
+      password: user.password,
       active: true
     }
 
     userRef.set(data, { merge: true });
     this.router.navigate(['/admin']);
+  }
+  private signInWithEmailPassword(email, password) {
+    // [START auth_signin_password]
+    firebase.auth().signInWithEmailAndPassword(email, password)
+      .then((userCredential) => {
+        // Signed in
+        var user = userCredential.user;
+        
+      this.router.navigate(['/admin/games']);
+        // ...
+      })
+      .catch((error) => {
+        var errorCode = error.code;
+        var errorMessage = error.message;
+      });
+    // [END auth_signin_password]
   }
 
   async signOut() {

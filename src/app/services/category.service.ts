@@ -1,7 +1,7 @@
 import { Injectable } from '@angular/core';
 import { AngularFirestore, AngularFirestoreDocument } from '@angular/fire/firestore';
 import { Router } from '@angular/router';
-import { Category } from '../models/category';
+import { Category } from '../models/category.interface';
 import * as uuid from 'uuid';
 
 @Injectable({

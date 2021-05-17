@@ -2,7 +2,7 @@ import { ElementRef } from '@angular/core';
 import { Component, OnInit, ViewChild } from '@angular/core';
 import { FormControl, FormGroup } from '@angular/forms';
 import { ActivatedRoute } from '@angular/router';
-import { Category } from 'src/app/models/category';
+import { Category } from 'src/app/models/category.interface';
 import { CategoryService } from 'src/app/services/category.service';
 
 @Component({
@@ -25,7 +25,7 @@ export class CategoryNewComponent implements OnInit {
   onSubmit() {
 
     let objectCategory: Category = {
-      uid: this.categoryId
+      id: this.categoryId
     } as any;
     Object.keys(this.newCategoryForm.controls).map(key => {
       objectCategory[key] = this.newCategoryForm.controls[key].value;

@@ -1,3 +1,4 @@
+
 export interface Game {
     uid: string;
     name: string;
@@ -9,5 +10,6 @@ export interface Game {
     ps5: boolean;
     xboxX: boolean;
     nintendoSwitch: boolean;
+    category: string;
   }
   

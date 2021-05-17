@@ -59,7 +59,8 @@
         "new_game": {
           "title": "Nuevo juego",
           "save": "Guardar juego"
-        }
+        },
+        "category": "Categoría"
       },
       "categories": {
         "title": "Categorías",
