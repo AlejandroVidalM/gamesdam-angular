@@ -7,11 +7,10 @@ import { Router } from '@angular/router';
   providedIn: 'root'
 })
 export class UsersService {
-  login() {
-    this.router.navigate(['/admin/games']);
-  }
 
   constructor(private firestore: AngularFirestore, private router: Router) { }
+
+
   getUsers() {
     return this.firestore.collection('users').snapshotChanges();
   }

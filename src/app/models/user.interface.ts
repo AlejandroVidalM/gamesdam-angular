@@ -4,6 +4,6 @@ export interface User {
   photoURL?: string;
   displayName?: string;
   myCustomData?: string;
-  password: string;
+  password?: string;
   active: boolean;
 }

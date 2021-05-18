@@ -1,5 +1,5 @@
 import { NgModule } from "@angular/core";
-import { Routes, RouterModule } from "@angular/router";
+import { Routes, RouterModule, CanActivate } from "@angular/router";
 
 // layouts
 import { AdminComponent } from "./layouts/admin/admin.component";
@@ -26,7 +26,7 @@ import { ProfileComponent } from "./views/profile/profile.component";
 import { GameNewComponent } from './views/admin/game-new/game-new.component';
 import { CategoryComponent } from "./views/admin/category/category.component";
 import { CategoryNewComponent } from "./views/admin/category-new/category-new.component";
-
+import { AuthGuardService as AuthGuard } from './services/auth-guard.service';
 const routes: Routes = [
   // admin views
   {
@@ -38,7 +38,7 @@ const routes: Routes = [
       { path: "tables", component: TablesComponent },
       { path: "maps", component: MapsComponent },
       { path: "users", component: UsersListComponent },
-      { path: "games", component: GameComponent },
+      { path: "games", component: GameComponent, canActivate: [AuthGuard] },
       { path: "games/new", component: GameNewComponent},
       { path: "categories", component: CategoryComponent },
       { path: "categories/new", component: CategoryNewComponent},

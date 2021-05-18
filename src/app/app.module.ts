@@ -64,10 +64,18 @@ import { LangsDropdownComponent } from './components/dropdowns/langs-dropdown/la
 import { LanguageService } from "./services/language.service";
 import { CategoryComponent } from './views/admin/category/category.component';
 import { CategoryNewComponent } from "./views/admin/category-new/category-new.component";
+import { AuthGuardService} from "./services/auth-guard.service"
+import { JwtHelperService } from "@auth0/angular-jwt";
+import { JwtModule } from "@auth0/angular-jwt";
 
 export function HttpLoaderFactory(http: HttpClient) {
   return new TranslateHttpLoader(http, './assets/i18n/', '.json');
 }
+
+export function tokenGetter() {
+  return localStorage.getItem("token");
+}
+
 @NgModule({
   declarations: [
     AppComponent,
@@ -120,17 +128,24 @@ export function HttpLoaderFactory(http: HttpClient) {
     AngularFireAuthModule,
     AngularFireStorageModule,
     HttpClientModule,
+    JwtModule.forRoot({
+      config: {
+        tokenGetter: tokenGetter,
+        allowedDomains: ["example.com"],
+        disallowedRoutes: ["http://example.com/examplebadroute/"],
+      },
+    }),
     TranslateModule.forRoot({
       loader: {
           provide: TranslateLoader,
           useFactory: HttpLoaderFactory,
           deps: [HttpClient]
-      }
+      },
   }),
   ReactiveFormsModule,
   FormsModule,
   ],
-  providers: [LanguageService],
+  providers: [LanguageService, AuthGuardService, JwtHelperService],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
