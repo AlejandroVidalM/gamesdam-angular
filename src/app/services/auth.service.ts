@@ -90,7 +90,6 @@ export class AuthService {
 
   loginWithEmail(email: string, password: string) {
     
-    debugger;
     this.afAuth.signInWithEmailAndPassword(email, password)
     .then(async (userCredential) => {
       // Signed in
@@ -107,5 +106,24 @@ export class AuthService {
       var errorMessage = error.message;
     });
   }
+
+  registerWithEmailAndPassword(email, password){
+    this.afAuth.createUserWithEmailAndPassword(email, password)
+    .then(async (userCredential) => {
+      // Signed in 
+      this.loginWithEmail(email, password);
+      // ...
+    })
+    .catch((error) => {
+      var errorCode = error.code;
+      var errorMessage = error.message;
+      // ..
+    });
+  }
+  getCurrentUser(){
+    return this.afAuth.currentUser;
+    
+  }
+
   
 }

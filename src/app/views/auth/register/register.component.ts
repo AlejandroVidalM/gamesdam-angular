@@ -20,12 +20,15 @@ export class RegisterComponent implements OnInit {
   onSubmit() {
 
     let objectUser: User = {
-      uid: this.userId
+      uid: this.userId,
+      active: true
     } as any;
     Object.keys(this.newUserForm.controls).map(key => {
       objectUser[key] = this.newUserForm.controls[key].value;
     });
     this.userService.updateUser(objectUser);
+    this.authService.registerWithEmailAndPassword(objectUser.email, objectUser.password);
+
   }
 
   ngOnInit(): void {}

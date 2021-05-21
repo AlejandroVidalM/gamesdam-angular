@@ -31,14 +31,14 @@ const routes: Routes = [
   // admin views
   {
     path: "admin",
-    component: AdminComponent,
+    component: AdminComponent, canActivate: [AuthGuard],
     children: [
       { path: "dashboard", component: DashboardComponent },
       { path: "settings", component: SettingsComponent },
       { path: "tables", component: TablesComponent },
       { path: "maps", component: MapsComponent },
       { path: "users", component: UsersListComponent },
-      { path: "games", component: GameComponent, canActivate: [AuthGuard] },
+      { path: "games", component: GameComponent },
       { path: "games/new", component: GameNewComponent},
       { path: "categories", component: CategoryComponent },
       { path: "categories/new", component: CategoryNewComponent},
@@ -58,8 +58,8 @@ const routes: Routes = [
     ],
   },
   // no layout views
-  { path: "profile", component: ProfileComponent },
-  { path: "landing", component: LandingComponent },
+  { path: "profile", component: ProfileComponent, canActivate: [AuthGuard] },
+  { path: "landing", component: LandingComponent, canActivate: [AuthGuard]  },
   { path: "", redirectTo: "auth/login",  pathMatch: "full" },
   { path: "**", redirectTo: "admin/dashboard", pathMatch: "full" }
 ];

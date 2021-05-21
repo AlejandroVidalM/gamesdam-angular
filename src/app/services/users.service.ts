@@ -19,9 +19,11 @@ export class UsersService {
     if(!user.uid) {
       user.uid = uuid.v4();
     }
+    if(!user.photoURL){
+      user.photoURL="https://robohash.org/test"+user.email;
+    }
     const userRef: AngularFirestoreDocument<User> = this.firestore.doc(`users/${user.uid}`);
     
     userRef.set(user, {merge: true})
-    this.router.navigate(['/auth/login']);
   }
 }

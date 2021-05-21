@@ -42,8 +42,8 @@
         "user": "Usuario",
         "status": {
           "title": "Estado",
-          "true": "Disponible",
-          "false": "No disponible"
+          "true": "Activo",
+          "false": "No activo"
         }
       },
       "games": {
@@ -115,5 +115,8 @@
         "message": "¿Deseas eliminar este elemento?"
       }
     }
+  },
+  "user": {
+    "logout": "Cerrar sesión"
   }
 }
