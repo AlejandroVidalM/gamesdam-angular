@@ -27,8 +27,6 @@ export class GameComponent implements OnInit {
     let categoryFinded: Category = undefined;
     for (var category of this.categoryList){
       
-        console.log(id);
-        console.log(category.id);
         if(category.id == id){
           categoryFinded = category;
         }

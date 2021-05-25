@@ -39,7 +39,7 @@ export class LoginComponent implements OnInit {
     });
     for( var user of this.userList){
       if(user.email== objectUser.email && user.password == objectUser.password){
-        debugger;
+        
         this.auth.loginWithEmail(objectUser.email, objectUser.password);
       }
     }

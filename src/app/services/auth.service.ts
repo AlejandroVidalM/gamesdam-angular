@@ -101,7 +101,6 @@ export class AuthService {
     })
     .catch((error) => {
       
-    debugger;
       var errorCode = error.code;
       var errorMessage = error.message;
     });
@@ -121,7 +120,7 @@ export class AuthService {
     });
   }
   getCurrentUser(){
-    return this.afAuth.currentUser;
+   // return firebase.auth().currentUser.photoURL;
     
   }
 

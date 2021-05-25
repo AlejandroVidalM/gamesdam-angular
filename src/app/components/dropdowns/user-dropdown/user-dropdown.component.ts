@@ -15,7 +15,7 @@ export class UserDropdownComponent implements AfterViewInit {
   constructor(private translate: TranslateService, private authService: AuthService, private usersService: UsersService) {
   }
 
-  user=undefined;
+  photo=undefined;
   dropdownPopoverShow = false;
   @ViewChild("btnDropdownRef", { static: false }) btnDropdownRef: ElementRef;
   @ViewChild("popoverDropdownRef", { static: false })
@@ -41,7 +41,7 @@ export class UserDropdownComponent implements AfterViewInit {
     this.authService.signOut();
   }
   ngOnInit(): void {
-    this.user = this.authService.getCurrentUser();
-    debugger;
+    this.photo = this.authService.getCurrentUser();
+    
   }
 }
